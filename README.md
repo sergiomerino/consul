@@ -155,6 +155,11 @@ Ejemplo: Volcado de configuración a env del entorno donde se ejecuta:
 ```envconsul -consul oclubunc022.isbcloud.isban.corp:8500 -sanitize -upcase  env & ```
 
 ¿Y si envconsul daemon corre DENTRO del contenedor donde la aplicación está en ejecución?
+Bastaría con modificar/extender la imagen donde va a correr la aplicación para incluir en script de arranque el siguiente comando:
+
+  envconsul -consul demo.consul.io -prefix global /bin/sh -c "env; echo "-----"; sleep 1000"
+  
+Lo importante aquí es la parte prefix que es la que va a implementar el watch automatico que permite traspasar los cambios del K-V Store a variables de entorno.
 
 Ver https://hub.docker.com/r/mhamrah/envconsul/
 
