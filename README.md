@@ -164,7 +164,9 @@ Lo importante aquí es la parte prefix que es la que va a implementar el watch a
 Ver https://hub.docker.com/r/mhamrah/envconsul/
 
 ## Proximos pasos (a considerar si aplica)
+
 Cobertura de otros aspectos sobre el producto:
+
 0. Encriptación de datos tanto en la comunicación entre nodos agente y servidor como en la persitencia de datos.
 0. Capacidades de control de acceso sobre K/V y servicios.
 0. Multiples chequeos sobre servicios.
